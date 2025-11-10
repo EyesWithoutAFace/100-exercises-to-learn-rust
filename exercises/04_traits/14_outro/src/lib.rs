@@ -86,10 +86,6 @@ impl Add<&u16> for SaturatingU16 {
 
 impl PartialEq<u16> for SaturatingU16 {
     fn eq(&self, other: &u16) -> bool {
-        if self.value == *other {
-            true
-        } else {
-            false
-        }
+        self.value == *other
     }
 }
